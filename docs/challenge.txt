@@ -1,0 +1,95 @@
+🎬 Escenario & Reto
+El sistema ya corre en producción: usuarios crean posts, reciben votos e interactúan. Pero el tablero no cierra: métricas inconsistentes, planes que no rinden como esperabas y actividad concentrada en pocos usuarios.
+
+Mensaje en pantalla:
+
+“Construir sistemas es solo la mitad del trabajo. Entender lo que producen es la otra mitad.”
+
+Tu misión no es “hacer gráficos”. Tu misión es hacer que los datos sean confiables y extraer señales para decisiones reales.
+
+🎯 Tu Misión
+Recibirás un dataset de actividad (product_activity.csv). Debes:
+
+Entender la estructura y la unidad de análisis.
+Detectar y medir inconsistencias.
+Limpiar con criterio (no perfección).
+Calcular métricas descriptivas y segmentaciones.
+Visualizar y concluir con evidencia.
+No es Data Science avanzada. Es pensamiento estructurado aplicado a datos reales.
+
+📦 Dataset (Unidad de Análisis)
+Archivo único: product_activity.csv
+🔗 Descargar Dataset aquí
+
+Cada fila representa actividad asociada a un post (evento).
+
+votes_received: engagement del post.
+user_total_posts: atributo del usuario repetido en múltiples filas (ojo con sesgos).
+🧱 Columnas principales:
+user_id, created_at (signup), country.
+plan_type (free/pro/enterprise - sucio).
+user_age, post_id, post_category (con typos).
+post_created_at, votes_received, user_total_posts.
+days_since_signup (columna derivada - no confiar ciegamente).
+device_type (web/mobile/desktop).
+📏 Reglas Obligatorias del Challenge
+1️⃣ Exploración Inicial (Medir antes de limpiar)
+Mostrar en el notebook:
+
+head(), info(), describe().
+Conteo de nulos y duplicados exactos.
+Valores únicos y frecuencias de: plan_type, post_category, device_type.
+Chequeos lógicos: ¿Cuántos posts ocurren antes del signup? ¿Cuántos days_since_signup son inconsistentes?
+2️⃣ Limpieza Básica con Criterio
+Normalización canónica: Mapear variantes a diccionarios fijos:
+plan_type: {free, pro, enterprise}
+device_type: {web, mobile, desktop}
+post_category: {tech, life, sports, science, finance, gaming, music, health, education, travel}
+Fechas: Convertir a datetime y reportar no parseables.
+Recálculo obligado: Crear days_since_signup_calc (post - signup). Comparar con el original y usar el calculado para el análisis.
+Quarantine: Separar filas con errores "duros" (post < signup, no parseables, fuera de diccionario) en un DF aparte con reason_code.
+📊 Data Quality Report
+Presentar un resumen con: Filas RAW vs CORE (clean), % de Quarantine, duplicados removidos y % de mismatches en fechas.
+
+📈 Métricas y Análisis
+4.1 Distribuciones (Volumen)
+Usuarios únicos por plan.
+Actividad (#posts) por país, categoría y dispositivo.
+4.2 Engagement (Votos)
+Votos por plan (media y mediana/percentiles).
+Votos por país, categoría y dispositivo.
+4.3 Promedios e Interpretación
+Calcular promedio de votos por plan y posts por usuario. Obligatorio: Explicar qué significa la unidad de análisis y qué sesgos (outliers) pueden existir.
+
+4.4 Evento vs Usuario
+Calcular promedio de votos por fila y promedio de votos agrupado por usuario. Explicar por qué difieren.
+
+📌 Concentración y Temporalidad
+Concentración: ¿Qué % de posts/votos viene del top 1% de usuarios?
+Tendencia: Actividad y engagement por semana/mes.
+🧠 Product Decisions (Basadas en evidencia)
+8.1 Preguntas:
+
+¿Qué segmento priorizarías y por qué?
+¿Qué parte del tablero "mentía" antes de limpiar?
+¿Qué nuevo dato agregarías al tracking?
+8.2 Acciones:
+Proponer 2 acciones concretas con su respaldo (tabla/gráfico) y mencionar las limitaciones del dataset.
+
+📦 Entregables Obligatorios
+Un único Jupyter Notebook ordenado con:
+
+Exploración y Limpieza (Quarantine + Recálculo).
+Data Quality Report.
+Métricas, Visualización y Segmentación.
+Product Decisions y Conclusiones.
+Exportación de archivos:
+
+clean_product_activity.csv (Dataset core).
+quarantine_product_activity.csv (Excluidos con motivo).
+metrics_summary.csv (Tabla de métricas principales).
+⭐ Bonus XP
+Comparación Mediana vs Media.
+Boxplots de votos para ver asimetría.
+Análisis de Cohortes por mes de signup.
+Métrica propia justificada (ej: engagement_score).
