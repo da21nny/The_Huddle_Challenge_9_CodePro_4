@@ -93,12 +93,12 @@ U00516,2024-04-12 20:16:22,US,free,32.0,P0002153,sports,2024-03-30 15:16:22,5,28
 U00349,2025-12-28 12:28:47,BR,free,26.0,P0001541,tech,2025-12-15 20:28:47,23,1,0,web,-13.0,post_before_signup;
 U00665,2024-11-03 04:05:20,MX,free,22.0,P0002787,music,2024-10-16 18:05:20,10,1,0,web,-18.0,post_before_signup;
 U00243,2025-02-03 13:41:27,PY,free,35.0,P0001060,finance,2025-01-31 12:41:27,2,15,0,mobile,-4.0,post_before_signup;
-U20001,,PY,pro,29.0,P0099001,tech,2025-03-01 10:00:00,4,3,1,web,,unparseable_dates;
+U20001,,PY,pro,29.0,P0099001,tech,2025-03-01 10:00:00,4,3,1,web,,unparseable_date;
 U20002,2025-04-10 09:15:00,BR,premium,34.0,P0099002,finance,2025-04-12 12:00:00,8,5,2,mobile,2.0,invalid_plan;
 U20003,2025-01-05 08:00:00,US,free,22.0,P0099003,health,2025-01-07 18:00:00,1,2,2,tablet,2.0,invalid_device;
 U20004,2024-11-20 14:30:00,AR,pro,41.0,P0099004,politics,2024-11-25 09:00:00,6,7,5,desktop,4.0,invalid_category;
 U20005,2025-06-01 00:00:00,CL,vip,27.0,P0099005,mistery,2025-06-02 00:00:00,3,1,1,console,1.0,invalid_plan;invalid_device;invalid_category;
 U20006,2025-05-10 00:00:00,PY,free,30.0,P0099006,travel,2025-05-09 23:00:00,2,4,0,web,-1.0,post_before_signup;
-U20007,2025-03-15 12:00:00,MX,enterprise,38.0,P0099007,science,,5,10,10,web,,unparseable_dates;
+U20007,2025-03-15 12:00:00,MX,enterprise,38.0,P0099007,science,,5,10,10,web,,unparseable_date;
 U20009,2025-08-01 10:10:10,CO,enterprise+,45.0,P0099009,education,2025-08-03 10:10:10,0,2,2,desktop,2.0,invalid_plan;
 U20010,2025-09-01 05:05:05,ES,free,,P0099010,tech,2025-09-02 05:05:05,9,1,1,phone,1.0,invalid_device;
