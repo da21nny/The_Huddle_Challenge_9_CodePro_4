@@ -100,5 +100,3 @@ U20004,2024-11-20 14:30:00,AR,pro,41.0,P0099004,politics,2024-11-25 09:00:00,6,7
 U20005,2025-06-01 00:00:00,CL,vip,27.0,P0099005,mistery,2025-06-02 00:00:00,3,1,1,console,1.0,invalid_plan;invalid_device;invalid_category;
 U20006,2025-05-10 00:00:00,PY,free,30.0,P0099006,travel,2025-05-09 23:00:00,2,4,0,web,-1.0,post_before_signup;
 U20007,2025-03-15 12:00:00,MX,enterprise,38.0,P0099007,science,,5,10,10,web,,unparseable_date;
-U20009,2025-08-01 10:10:10,CO,enterprise+,45.0,P0099009,education,2025-08-03 10:10:10,0,2,2,desktop,2.0,invalid_plan;
-U20010,2025-09-01 05:05:05,ES,free,,P0099010,tech,2025-09-02 05:05:05,9,1,1,phone,1.0,invalid_device;
